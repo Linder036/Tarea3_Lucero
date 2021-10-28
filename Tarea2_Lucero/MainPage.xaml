@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea2_Lucero.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Calificaciones Uisrael" HorizontalTextAlignment="Center" TextColor="White" FontSize="10"/>
+        </Frame>
+
+        <Label x:Name="lblUsuario"/>
+        <Label x:Name="lblContrasena"/>
+
+        <Entry x:Name="txtUsuario"/>
+        <Entry x:Name="txtContrasena"/>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        
+        <Label Text="Ingrese nota parcial 1" Grid.Row="0" Grid.Column="0"/>
+        <Entry x:Name="txtParcialUno" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" TextChanged="txtParcialUno_TextChanged"/>
+
+        <Label Text="Ingrese nota examen 1" Grid.Row="1" Grid.Column="0"/>
+        <Entry x:Name="txtExamenUno" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" TextChanged="txtExamenUno_TextChanged"/>
+
+        <Label Text="El resultado del parcial 1 es" Grid.Row="2" Grid.Column="0"/>
+        <Entry x:Name="txtResultado" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
+
+        <Label Text="Ingrese nota parcial 2" Grid.Row="3" Grid.Column="0"/>
+        <Entry x:Name="txtParcialDos" Keyboard="Numeric" Grid.Row="3" Grid.Column="1" TextChanged="txtParcialDos_TextChanged"/>
+
+        <Label Text="Ingrese nota examen 2" Grid.Row="4" Grid.Column="0"/>
+        <Entry x:Name="txtExamenDos" Keyboard="Numeric" Grid.Row="4" Grid.Column="1" TextChanged="txtExamenDos_TextChanged"/>
+
+        <Label Text="El resultado del parcial 2 es" Grid.Row="5" Grid.Column="0"/>
+        <Entry x:Name="txtResultadoDos" IsReadOnly="True" Grid.Row="5" Grid.Column="1"/>
+
+        <Label Text="La nota final es" Grid.Row="6" Grid.Column="0"/>
+        <Entry x:Name="txtResultadofinal" IsReadOnly="True" Grid.Row="6" Grid.Column="1" TextChanged="txtResultadofinal_TextChanged"/>
+
+        </Grid>
+        <Button x:Name="btnNotaFinal" Text="Calcular" Clicked="btnNotaFinal_Clicked"/>
+        
+    </StackLayout>
+
+</ContentPage>
